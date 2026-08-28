@@ -1,0 +1,12 @@
+{
+  "domain": "rinnai",
+  "name": "Rinnai Boiler",
+  "version": "2.0.0",
+  "documentation": "https://github.com/local/rinnai",
+  "config_flow": true,
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": [],
+  "integration_type": "device",
+  "iot_class": "cloud_polling"
+}

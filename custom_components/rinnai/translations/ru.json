@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Газовый котёл Rinnai",
+        "description": "Введите RoomControlId пульта (MAC его Wi-Fi, 12 шестнадцатеричных символов) и DeviceId телефона, уже зарегистрированного в приложении Rinnai. Облако принимает только известный ему DeviceId.",
+        "data": {
+          "room_control_id": "RoomControlId (MAC пульта)",
+          "device_id": "DeviceId (зарегистрированный телефон)"
+        }
+      }
+    },
+    "error": {
+      "invalid_id": "Идентификатор должен состоять из 12 шестнадцатеричных символов.",
+      "invalid_room_control_id": "Облако Rinnai не знает такой пульт.",
+      "cannot_connect": "Нет связи с облаком Rinnai.",
+      "invalid_device_id": "DeviceId должен быть UUID, например A1B2C3D4-1234-5678-9ABC-DEF012345678."
+    },
+    "abort": {
+      "already_configured": "Этот котёл уже настроен."
+    }
+  }
+}
