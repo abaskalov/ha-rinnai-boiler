@@ -3,6 +3,11 @@
 Home Assistant integration for Rinnai gas boilers controlled by a **WF-100W / WF-S100** Wi-Fi room controller
 (sold in Russia/Kazakhstan as *Rinnai Smart IoT* / «Смарт управление», in Korea as *Rinnai Smart Boiler*).
 
+
+![Entities provided by the integration](docs/entities.svg)
+
+> The image above is an illustration of the entities the integration creates.
+> Real Apple Home / Home Assistant screenshots welcome — see [Screenshots](#screenshots).
 Tested on **RBK-197 RTU** with a **WF-100W-RU** controller.
 
 ## Two ways to run
@@ -82,6 +87,14 @@ Temperatures with bit `0x80` set carry an extra half degree.
 
 Cloud commands (`POST /control`): `01` flags, `02` room setpoint, `03` circuit setpoint,
 `04` hot water setpoint, `05` away, `07` economy, `08` night.
+
+## Screenshots
+
+_Placeholder — real screenshots go here._
+
+| Home Assistant device page | Apple Home |
+|---|---|
+| _add `docs/ha.png`_ | _add `docs/apple-home.png`_ |
 
 ## Credits
 
