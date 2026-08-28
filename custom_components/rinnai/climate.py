@@ -44,7 +44,18 @@ class RinnaiClimate(RinnaiEntity, ClimateEntity):
 
     @property
     def target_temperature(self) -> float | None:
-        return self._data.get("room_set")
+        value = self._data.get("room_set")
+        if value is None:
+            return None
+        # В режиме «по теплоносителю» пульт кладёт в это поле уставку контура,
+        # которая выходит за диапазон комнатного термостата. Показываем
+        # значение, ограниченное допустимым диапазоном, иначе Home Assistant
+        # и HomeKit получают состояние вне собственных границ сущности.
+        return min(max(float(value), ROOM_MIN), ROOM_MAX)
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        return {"raw_room_setpoint": self._data.get("room_set")}
 
     @property
     def hvac_mode(self) -> HVACMode:
