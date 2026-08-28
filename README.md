@@ -6,8 +6,7 @@ Home Assistant integration for Rinnai gas boilers controlled by a **WF-100W / WF
 
 ![Entities provided by the integration](docs/entities.svg)
 
-> The image above is an illustration of the entities the integration creates.
-> Real Apple Home / Home Assistant screenshots welcome — see [Screenshots](#screenshots).
+> Diagram of the entities the integration creates. Real screenshots are in [Screenshots](#screenshots) below.
 Tested on **RBK-197 RTU** with a **WF-100W-RU** controller.
 
 ## Two ways to run
@@ -90,11 +89,15 @@ Cloud commands (`POST /control`): `01` flags, `02` room setpoint, `03` circuit s
 
 ## Screenshots
 
-_Placeholder — real screenshots go here._
+Real screenshots from a running installation — the boiler appears as a normal
+thermostat and water heater, both in Home Assistant and in Apple Home.
 
-| Home Assistant device page | Apple Home |
+| Apple Home | Home Assistant |
 |---|---|
-| _add `docs/ha.png`_ | _add `docs/apple-home.png`_ |
+| <img src="docs/apple-home.png" width="330" alt="Boiler in Apple Home: heating and hot water tiles"> | <img src="docs/home-assistant.png" width="330" alt="Boiler climate entities in Home Assistant"> |
+
+Hot water shows the live temperature (41.5 °C) heating towards its setpoint (45 °C);
+heating is off in summer and reports the room temperature (28 °C).
 
 ## Credits
 
